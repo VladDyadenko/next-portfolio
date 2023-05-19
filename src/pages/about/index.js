@@ -1,10 +1,16 @@
-import MainLayout from "@/components/seo/MainLayout";
+import HeadComponent from "@/components/seo/HeadComponent";
+
 
 const about = () => {
   return (
-    <MainLayout title={"Images Page"}>
-      <h2 >Images Page</h2>
-    </MainLayout>
+    <>
+      <HeadComponent
+        title={"About Page"}
+        keywords={"Aboit info"}
+        description={"word"}
+      />
+      <h2>About Page</h2>
+    </>
   );
 };
 

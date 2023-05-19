@@ -1,14 +1,15 @@
-
-import MainLayout from "@/components/seo/MainLayout";
-
-
+import HeadComponent from "@/components/seo/HeadComponent";
 
 export default function Home() {
   return (
     <>
-      <MainLayout>
-        <h1 className="ml-2.5">Hello!</h1>
-      </MainLayout>
+      <HeadComponent
+        title={"Home Page"}
+        keywords={"More info, API"}
+        description={"information, blog and enc."}
+      />
+
+      <h1 className="ml-2.5">Hello!</h1>
     </>
   );
 }

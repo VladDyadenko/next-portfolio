@@ -3,14 +3,7 @@ import axios from "axios";
 import { FcAndroidOs } from "react-icons/fc";
 
 const Header = () => {
-  //   const getCatFacts = async()=>{
 
-  //     const response = await axios.get(`https://cat-fact.herokuapp.com/facts`)
-  //     const data = await response.data
-  //     console.log(data)
-  // }
-
-  // getCatFacts()
 
   return (
     <header className=" w-full h-15">

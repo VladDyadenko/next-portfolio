@@ -1,11 +1,14 @@
-import MainLayout from "@/components/seo/MainLayout";
+import HeadComponent from "@/components/seo/HeadComponent";
 
 const portfolio = () => {
   return (
     <>
-      <MainLayout>
-        <h3>Portfolio</h3>
-      </MainLayout>
+     <HeadComponent
+        title={"Portfolio Page"}
+        keywords={"Website"}
+        description={"tech scils"}
+      />
+      <h3>Portfolio</h3>
     </>
   );
 };
