@@ -9,7 +9,7 @@ export default function Home() {
         description={"information, blog and enc."}
       />
 
-      <h1 className="ml-2.5">Hello!</h1>
+      <h1 className="ml-2.5 text-textColor">Hello!</h1>
     </>
   );
 }
