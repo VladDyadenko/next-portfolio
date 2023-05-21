@@ -32,8 +32,11 @@ const Header = () => {
                   className={`relative ${
                     router.pathname === path
                       ? "after:scale-100 text-[#d34235]"
-                      : ""
-                  } after:transition-transform hover:after:scale-100  after:absolute after:scale-0 after:h-[1px] after:w-full after:left-0 after:-bottom-0 after:bg-white text-center text-2xl text-white font-medium`}
+                      : "text-white"
+                  } after:transition-transform hover:after:scale-100 
+                   after:absolute after:scale-0 after:h-[1px]
+                   after:w-full after:left-0 after:-bottom-0 after:bg-white
+                    text-center text-2xl  font-medium`}
                   href={path}
                 >
                   {name}
