@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import BurgerMenu from "./BurgerMenu";
 import Social from "./Social";
+import ButtonBurgerMenu from "./ButtonBurgerMenu";
 
 export const navLink = [
   { name: "Home", path: "/" },
@@ -16,6 +17,10 @@ const Header = () => {
   const router = useRouter();
 
   const handelOnCloseMenu = () => {
+    setActive(!active);
+    setDisplay(!display);
+  };
+  const hendleBtnMenu = () => {
     setActive(!active);
     setDisplay(!display);
   };
@@ -45,21 +50,15 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-        <BurgerMenu display={display} handelOnCloseMenu={handelOnCloseMenu} />
-        <Social display={"hidden"} />
-        <button
-          onClick={() => {
-            setActive(!active);
-            setDisplay(!display);
-          }}
-          className={`group hidden sm:block relative h-5 w-[30px] ${
-            active ? "active" : ""
-          }`}
-        >
-          <span className=" absolute left-0 group-[.active]:translate-y-2 group-[.active]:rotate-45 top-0 bg-white h-[1px] w-full transition-transform"></span>
-          <span className=" absolute left-0 top-1/2 bg-white h-[1px] w-full group-[.active]:opacity-0 transition-opacity"></span>
-          <span className=" absolute left-0 bottom-0 bg-white h-[1px] w-full group-[.active]:-translate-y-[11px] group-[.active]:-rotate-45 transition-transform"></span>
-        </button>
+        <BurgerMenu
+          router={router}
+          hendleBtnMenu={hendleBtnMenu}
+          active={active}
+          display={display}
+          handelOnCloseMenu={handelOnCloseMenu}
+        />
+        <Social display={display} />
+        <ButtonBurgerMenu hendleBtnMenu={hendleBtnMenu} active={active} />
       </header>
     </>
   );

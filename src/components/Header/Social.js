@@ -5,18 +5,18 @@ const Social = ({ display }) => {
   return (
     <>
       <ul
-        className={`items-center flex-col sm:${display} ${
-          display === "flex"
-            ? "mt-10  justify-center gap-3"
-            : "flex  justify-start "
+        className={`items-center flex-col ${!display && "sm:hidden"} ${
+          display ? "mt-[100px]  justify-center gap-3" : "flex  justify-start "
         }`}
       >
         <li>
           <a
             href="#"
             className={`${
-              display === "flex" && ""
-            } flex items-center justify-start text-xl text-white hover:scale-105`}
+              display
+                ? "flex items-center justify-center text-3xl mb-5 text-white hover:scale-105"
+                : "flex items-center justify-start text-xl text-white hover:scale-105"
+            }`}
           >
             <AiFillLinkedin className="fill-white mr-2" />
             <span>linkedin</span>
@@ -26,8 +26,10 @@ const Social = ({ display }) => {
           <a
             href="#"
             className={`${
-              display === "flex" && "text-3xl"
-            } flex items-center justify-start text-xl text-white hover:scale-105`}
+              display
+                ? "flex items-center justify-center text-3xl text-white hover:scale-105"
+                : "flex items-center justify-start text-xl text-white hover:scale-105"
+            }`}
           >
             <VscGithub className="fill-white mr-2" />
             <span className="">Github</span>
